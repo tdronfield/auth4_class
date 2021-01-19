@@ -2,7 +2,8 @@ const http = require('http');
 // like a PHP require
 // require is more or less the same as a JS import 
 
-const hostname = '127.0.0.1'; // localhost
+// node is smart enough to recognize we are using localhost
+// const hostname = '127.0.0.1'; // localhost
 const port = process.env.PORT || 3000; // localhost:3000
 
 const server = http.createServer((req, res) => {
@@ -11,6 +12,6 @@ const server = http.createServer((req, res) => {
   res.end('Hello World');
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(port, () => {
+  console.log(`Server is now running at ${port}/`);
 });
