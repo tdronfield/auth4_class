@@ -12,7 +12,7 @@ server.use(express.static(path.join(__dirname, 'public')));
 
 server.get("/", (req, res) => {
   console.log('you have hit the home route');
-  res.send('index');
+  res.sendFile(path.join(__dirname, 'views/index.html')); //localhost/views/index.html - you don't see this
 })
 
 server.get("/contact", (req, res) => {
