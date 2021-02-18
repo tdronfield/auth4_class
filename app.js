@@ -17,7 +17,7 @@ server.get("/", (req, res) => {
 
 server.get("/contact", (req, res) => {
   console.log('hit the contact page');
-  res.send('contact');
+  res.sendFile(path.join(__dirname, 'views/contact.html'));
 })
 
 const port = process.env.PORT || 3000; // localhost:3000
